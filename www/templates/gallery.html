@@ -1,0 +1,55 @@
+<ion-modal-view view-title="Gallery">
+    <ion-content>
+    <div class="bar bar-calm" ng-if="!gotMessage">
+        <h1 class="title">Card Details</h1>
+    </div>
+  
+    <div class="row" ng-if="!gotMessage">                    
+       <div class="card1 col col-50">
+          <img src="{{product.ImagePath}}" alt="Avatar" style="width:100%">
+          <div class="container1">
+            <h4><b>Thank You</b></h4> 
+            <p>Rupees.0</p> 
+          </div>
+        </div>
+        <div id="id01" class="col" style="margin-top:50px;" >
+          <form >
+            <div >
+              <h1><span>{{product.Category}}</span></h1>
+              <hr>
+              <label ><b>From</b></label>
+              <input type="text" placeholder="Enter Name" ng-model="detailsToSend.From" >
+
+              <label ><b>To</b></label>
+              <input type="text" placeholder="To" ng-model="detailsToSend.To" >
+
+              <label ><b>Message</b></label>
+              <textarea rows="4" cols="50"  ng-model="detailsToSend.Message"></textarea>
+
+              <label ><b>Quantity</b></label>
+              <input type="number" placeholder="Quantity">
+
+              <label ><b>Delivery Date</b></label>
+              <input type="date" min="2018-10-03"><br><br>
+
+              <div class="clearfix">
+                <button class="button button-small button-calm" ng-click="closeModal()">Cancel</button>
+                <button class="button button-small button-calm" ng-click="proceedClicked()">Proceed</button>
+              </div>
+            </div>
+          </form>
+        </div>
+    </div> 
+
+    <div ng-if="gotMessage">
+      <div style="margin-top:100px">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+        <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+        <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+      </svg>
+      <div style="margin-top:20px;"><p class="success">You have successfully sent</p></div>
+    </div>
+    </div>    
+    </ion-content>
+    
+</ion-modal-view>

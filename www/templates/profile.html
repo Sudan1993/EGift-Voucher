@@ -1,0 +1,40 @@
+<ion-view view-title="Profile">
+    <ion-content ng-class="{expanded:$scope.isExpanded}" overflow-scroll="true">
+        <div class="tabs tabs-calm tabs-icon-top static" style='height: 60px'>
+            <div style="vertical-align: center"><font size="5">Say it with Gifts</font></div>
+        </div>
+             <ion-scroll>
+                <div >
+                 <div class="row" >                    
+                   <div class="card1" ng-repeat='product in products' ng-click='giveCardDetail(product)' href="#">
+                      <img src="{{product.ImagePath}}" alt="Avatar" style="width:100%">
+                      <div class="container1">
+                        <h4><b>Thank You</b></h4> 
+                        <p>Rupees.0</p> 
+                      </div>
+                    </div>
+                </div>
+                
+               </div>
+       </ion-scroll>
+        
+        <div class="tabs tabs-calm tabs-icon-top static" style='height: 60px'>
+            <div style="vertical-align: center"><font size="5">For the anniversary celebrations</font></div>
+        </div>
+        <ion-scroll>
+                <div >
+                 <div class="row" >                    
+                   <div class="card1" ng-repeat='product in anniversayProducts' ng-click='giveCardDetail(product)' href="#">
+                      <img src="{{product.ImagePath}}" alt="Avatar" style="width:100%">
+                      <div class="container1">
+                        <h4><b>Anniversary</b></h4> 
+                        <p>Rupees.0</p> 
+                      </div>
+                    </div>
+                </div>
+                
+               </div>
+       </ion-scroll>
+       
+    </ion-content>
+</ion-view>

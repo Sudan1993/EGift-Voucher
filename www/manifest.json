@@ -1,0 +1,15 @@
+{
+  "name": "Electronic Gift Cards",
+  "short_name": "E-Gifts",
+  "display": "minimal-ui",
+  "start_url": "/",
+  "theme_color": "#673ab6",
+  "background_color": "#111111",
+  "icons": [
+    {
+      "src": "img/login_logo.png",
+      "sizes": "225x225",
+      "type": "image/png"
+    }
+  ]
+}
